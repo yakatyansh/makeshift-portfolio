@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash's Interactive Portfolio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+    }
+
+    nav {
+      background: #3498db;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    #skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #skills ul li {
+      background: #3498db;
+      color: #fff;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    #skills ul li:hover {
+      transform: scale(1.1);
+      background-color: #2980b9;
+    }
+
+    .stats img {
+      max-width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: #fff;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      background: #e74c3c;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .contact-button:hover {
+      background: #c0392b;
+      transform: translateY(-3px);
+    }
+
+    .animated {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .animated:hover {
+      transform: scale(1.1);
+    }
+
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .scroll-button:hover {
+      background: #2980b9;
+      transform: scale(1.1);
+    }
+
+    .scroll-button i {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm Yash 👋</h1>
+    <p>A passionate developer with expertise in Electrical Engineering and Computer Science</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m currently exploring and learning cutting-edge technologies while collaborating on open-source projects. With a solid background in Electrical Engineering and Computer Science, I love bridging the gap between hardware and software to build innovative solutions.</p>
+    <p>Fun fact: I’m a car enthusiast who loves everything automotive!</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li class="animated">Java</li>
+      <li class="animated">TypeScript</li>
+      <li class="animated">Python</li>
+      <li class="animated">C++</li>
+      <li class="animated">JavaScript</li>
+      <li class="animated">React</li>
+      <li class="animated">Django</li>
+      <li class="animated">Spring Boot</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are some of my favorite projects:</p>
+    <ul>
+      <li><strong>Quiz App:</strong> A full-stack quiz application with HTML, CSS, and JavaScript frontend, and Spring Boot backend.</li>
+      <li><strong>Blockchain in Golang:</strong> A blockchain implementation showcasing my skills in Golang.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Want to collaborate or just say hi? Feel free to reach out!</p>
+    <a href="mailto:your-email@example.com" class="contact-button">Get in Touch</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yash. All rights reserved.</p>
+  </footer>
+
+  <button class="scroll-button" onclick="scrollToTop()"><i>&uarr;</i></button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
